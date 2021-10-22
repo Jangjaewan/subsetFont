@@ -1,0 +1,1 @@
+U+b05f-b07b, U+b07e-b07f, U+b081-b083, U+b085-b08b, U+b08d-b097, U+b09b, U+b09d-b09f, U+b0a2-b0a7, U+b0aa, U+b0b0, U+b0b2, U+b0b6-b0b7, U+b0b9-b0bb, U+b0bd-b0c3, U+b0c6-b0c7, U+b0ca-b0cf, U+b0d1-b0df, U+b0e1-b0e4, U+b0e6-b107, U+b10a-b10b, U+b10d-b10f, U+b111-b112, U+b114-b117, U+b119-b11a, U+b11c-b11f

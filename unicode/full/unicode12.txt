@@ -1,0 +1,1 @@
+U+d04b-d04f, U+d051-d057, U+d059-d06b, U+d06d-d06f, U+d071-d073, U+d075-d07b, U+d07e-d0a3, U+d0a6-d0a7, U+d0a9-d0ab, U+d0ad-d0b3, U+d0b6, U+d0b8, U+d0ba-d0bf, U+d0c2-d0c3, U+d0c5-d0c7, U+d0c9-d0cf, U+d0d2, U+d0d6-d0db, U+d0de-d0df, U+d0e1-d0e3, U+d0e5-d0eb, U+d0ee-d0f0, U+d0f2-d104

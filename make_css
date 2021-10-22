@@ -1,0 +1,55 @@
+#!/bin/bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+fontFile="$DIR/fonts/$1"
+fontList=()
+fileName=$1
+for font in $fontFile/*.ttf; do	
+	fontname=$(basename "$font")	
+	fontname=${fontname%.*}
+	fontList=(${fontList[@]} $fontname)			
+done
+fontLength=${#fontList[@]}
+fontWeight=normal
+htmlNode=''
+for((i=0;i<$fontLength;i++)); do
+if [[ "${fontList[$i]}" == *"Black"* ]]
+then
+	fontWeight=900
+elif [[ "${fontList[$i]}" == *"ExtraBold"* ]]
+then
+	fontWeight=800
+elif [[ "${fontList[$i]}" == *"Bold"* ]]
+then
+	fontWeight=700
+elif [[ "${fontList[$i]}" == *"SemiBold"* ]]
+then
+	fontWeight=600
+elif [[ "${fontList[$i]}" == *"Medium"* ]]
+then
+	fontWeight=500
+elif [[ "${fontList[$i]}" == *"Regular"* ]]
+then
+	fontWeight=400
+elif [[ "${fontList[$i]}" == *"Light"* ]]
+then
+	fontWeight=300
+elif [[ "${fontList[$i]}" == *"ExtraLight"* ]]
+then
+	fontWeight=200
+elif [[ "${fontList[$i]}" == *"Thin"* ]]
+then
+	fontWeight=100
+else
+	fontWeight=normal
+fi
+htmlNode+="@font-face {
+    font-family: $fileName;
+    font-weight: $fontWeight;
+    src: url(Subset/${fontList[$i]}.woff2) format('woff2'),"$'\r'"url(Subset/${fontList[$i]}.woff) format('woff'),"$'\r'"url(Subset/${fontList[$i]}.ttf) format('truetype')
+}"$'\r'
+echo $fontWeight
+done
+cat <<make_css > $DIR/output/kr/$fileName/$fileName.css
+$htmlNode
+make_css

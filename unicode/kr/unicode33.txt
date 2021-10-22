@@ -1,0 +1,1 @@
+U+c101-c11b, U+c11f, U+c121-c123, U+c125-c12b, U+c12e, U+c132-c137, U+c13a-c13b, U+c13d-c13f, U+c141-c147, U+c14a, U+c14c-c153, U+c155-c157, U+c159-c15b, U+c15d-c166, U+c169-c16f, U+c171-c177, U+c179-c18b, U+c18e-c18f, U+c191-c193, U+c195-c19b, U+c19d-c19e, U+c1a0, U+c1a2-c1a4, U+c1a6-c1bb

@@ -1,0 +1,1 @@
+U+c049-c057, U+c059-c05b, U+c05d-c05f, U+c061-c067, U+c069-c08f, U+c091-c0ab, U+c0ae-c0af, U+c0b1-c0b3, U+c0b5, U+c0b7-c0bb, U+c0be, U+c0c2-c0c7, U+c0ca-c0cb, U+c0cd-c0cf, U+c0d1-c0d7, U+c0d9-c0da, U+c0dc, U+c0de-c0e3, U+c0e5-c0eb, U+c0ed-c0f3, U+c0f6, U+c0f8, U+c0fa-c0ff

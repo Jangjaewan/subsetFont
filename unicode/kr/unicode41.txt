@@ -1,0 +1,1 @@
+U+bb90-bba3, U+bba5-bbab, U+bbad-bbbf, U+bbc1-bbf7, U+bbfa-bbfb, U+bbfd-bbfe, U+bc01-bc07, U+bc09-bc0a, U+bc0e, U+bc10, U+bc12-bc13, U+bc17, U+bc19-bc1a, U+bc1e, U+bc20-bc23, U+bc26, U+bc28, U+bc2a-bc2c, U+bc2e-bc2f, U+bc32-bc33, U+bc35-bc37, U+bc39-bc3f, U+bc41-bc42, U+bc44, U+bc46-bc48, U+bc4a-bc4d

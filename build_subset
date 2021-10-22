@@ -1,0 +1,73 @@
+#!/bin/bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+subsetType=$1
+fontName=$2
+ft=$3
+txtType=$4
+unicodeType=$5
+if [ ${#txtType} == 0 ]; then
+	txtType=glyphs
+fi
+fontType=($ft 'woff' 'woff2')
+fontList=()
+fontFile="$DIR/fonts/$fontName"
+textFile=$DIR/glyphs/$subsetType/$txtType.txt
+SUB=$DIR/output/$subsetType/$fontName
+for font in $fontFile/*.$ft; do
+	fontList=(${fontList[@]} "$font")
+done
+if test ! -d $SUB
+	then mkdir -p $DIR/output/$subsetType/$fontName/Subset
+fi
+function makeSubset(){
+	if [ $subsetType != kr ]; then
+		local val=$1
+		mkdir -p $SUB/Subset/sub${val}
+	fi
+	for ext in ${fontType[*]}; do
+		for p in ${fontList[*]}; do
+			filename=$(basename "$p")
+			title="${filename%.*}"
+			printf "Making \e[1m\e[34m$title.$ext\e[0m..."
+			output_file=$DIR/output/$subsetType/$fontName/Subset/$title.$ext
+			if [ $ext != $ft ]; then
+				flavor=$ext
+			fi
+			if [ $subsetType != kr ]; then
+				textFile=$DIR/glyphs/$subsetType/glyphs${val}.txt
+				output_file=$DIR/output/$subsetType/$fontName/Subset/sub${val}/$title.$ext
+				if [ ${#unicodeType} != 0 ]; then
+					runSubset $unicodeType
+				else
+					runSubset
+				fi
+			else
+				runSubset
+			fi
+
+			if [ $? ]; then
+				printf "\e[31m done!\n"
+			fi
+		done
+	done
+}
+function runSubset(){	
+	 if [ $# != 0 ]; then
+		unicodeFile=$DIR/unicode/$1/unicode${val}.txt
+		pyftsubset "$p" --flavor=$flavor --with-zopfli --output-file="$output_file" --unicodes-file=$unicodeFile --layout-features='*'   --glyph-names --symbol-cmap --legacy-cmap --notdef-glyph --notdef-outline   --recommended-glyphs --name-IDs='*' --name-legacy --name-languages='*' --passthrough-tables --drop-tables=
+	else
+		pyftsubset "$p" --flavor=$flavor --with-zopfli --output-file="$output_file" --text-file=$textFile --layout-features='*'   --glyph-names --symbol-cmap --legacy-cmap --notdef-glyph --notdef-outline   --recommended-glyphs --name-IDs='*' --name-legacy --name-languages='*' --passthrough-tables --drop-tables=
+	 fi
+}
+if [ $subsetType != kr ]; then
+	for i in {0..119};do
+		if [[ $unicodeType == kr && $i > 91 ]]; then
+			break
+		fi
+		makeSubset $i
+	done
+else
+	makeSubset
+fi
+bash make_css $2

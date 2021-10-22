@@ -1,0 +1,1 @@
+U+ba30-ba37, U+ba3a-ba3b, U+ba3d-ba3f, U+ba41-ba47, U+ba49-ba4a, U+ba4c, U+ba4e-ba53, U+ba56-ba57, U+ba59-ba5b, U+ba5d-ba63, U+ba65-ba66, U+ba68-ba6f, U+ba71-ba73, U+ba75-ba77, U+ba79-ba84, U+ba86, U+ba88-baa7, U+baaa, U+baad-baaf, U+bab1-bab7, U+baba, U+babc, U+babe-bae5

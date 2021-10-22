@@ -1,0 +1,1 @@
+U+bd03, U+bd06, U+bd08, U+bd0a-bd0f, U+bd11-bd22, U+bd25-bd47, U+bd49-bd58, U+bd5a-bd7f, U+bd82-bd83, U+bd85-bd87, U+bd8a-bd8f, U+bd91-bd92, U+bd94, U+bd96-bd98, U+bd9a-bdaf
