@@ -9,6 +9,7 @@
 	- [Python 다운로드](https://www.python.org/downloads/)
 	- [설치 가이드](https://wikidocs.net/8)
 	- 터미널에 <code>python --version</code> 명령어 실행했을 때 버전이 출력되면 정상적으로 설치된 것
+![Alt text](/images/thumb_1.jpg)
 
 2.  pyftsubset 라이브러리 설치([폰트툴즈의 pyftsubset을 사용한 폰트 서브셋 만들기](https://www.44bits.io/ko/post/optimization_webfont_with_pyftsubnet)) 
 ```
