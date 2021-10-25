@@ -9,7 +9,8 @@
 	- [Python 다운로드](https://www.python.org/downloads/)
 	- [설치 가이드](https://wikidocs.net/8)
 	- 터미널에 <code>python --version</code> 명령어 실행했을 때 버전이 출력되면 정상적으로 설치된 것
-![Alt text](/images/thumb_1.jpg)
+
+![파이썬 버전확인 명령어](/images/thumb_1.jpg)
 
 2.  pyftsubset 라이브러리 설치([폰트툴즈의 pyftsubset을 사용한 폰트 서브셋 만들기](https://www.44bits.io/ko/post/optimization_webfont_with_pyftsubnet)) 
 ```
@@ -24,6 +25,9 @@ Try pyftsubset --help for more information.
 //usage... 메세지 출력되면 정상
 ```
 3. 다운로드 받은 <code>fonts</code> 디렉토리에 웹폰트 폴더 생성(폴더명은 웹폰트로 사용할 이름)
+
+![폴더생성](/images/thumb_2.jpg)
+
 4. 생성된 폴더 안에 다운로드 받은 폰트 파일(ttf, otf) 추가
 5. 아래 리스트를 참고하여 굵기별 폰트 파일의 이름에 추가 및 수정
 	- Black = 900
@@ -35,6 +39,9 @@ Try pyftsubset --help for more information.
 	- Light = 300
 	- ExtraLight = 200
 	- Thin = 100
+
+![](/images/thumb_3.jpg)
+
 6. 스크립트 파일 실행
 	- 스크립트 파일 매개변수 : [kr || google] [폰트이름(폴더명)] [ttf || otf] [옵션 nonKr || onlyKr || onlyEn || onlyNum ] [옵션 full || kr ]
 	- <code> EX) bash build_subset kr GmarketSans ttf</code>
@@ -54,6 +61,11 @@ Try pyftsubset --help for more information.
 			- kr : 노토 KR 기준 92개의 unicode-range
 			- full : 나눔고딕 기준 119개의  unicode-range
 
+![](/images/thumb_4.jpg)
+
+7. 실행이 완료되면 output > kr 디렉토리에 fonts 폴더에서 만들었던 폴더가 생성되어 있고 Subset 폴더와 웹폰트용 CSS 파일이 추가되어 있음
+
+![](/images/thumb_5.jpg)
 
 ## 참고 링크
 
